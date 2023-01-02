@@ -8,4 +8,22 @@ def main(s1,s2,s3):
     Returns:
         string
     """
-    return
+    a= ''
+    if len(s1) %2 ==1:
+        a = s1
+    if len(s2) %2 ==1:
+        if len(a)!=0:
+            a+= ', ' + s2
+        else:
+            a = s2
+    if len(s3) %2 ==1:
+        if len(s3)!=0:
+            a+= ', ' + s3
+        else:
+            a = s3
+        
+    return f'[{a}]'
+
+
+print(main("codeschool.uz","example","python"))
+
