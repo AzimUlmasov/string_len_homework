@@ -1,4 +1,5 @@
-def main(s):
+def main(s: str) -> str:
+
     """
     Given variable type string s. Return the character in the middle.
     If the length is even, return two characters in the middle.
@@ -8,4 +9,12 @@ def main(s):
     Returns:
         str: answer
     """
-    return
+    lenght = len(s)
+    if lenght % 2 == 0:
+        middle = lenght // 2
+        return s[middle-1:middle+1]
+    else:
+        middle = lenght // 2
+        return s[middle]
+
+print(main("cool"))
